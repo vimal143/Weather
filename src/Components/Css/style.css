@@ -15,7 +15,7 @@
 }
 .weather-night
 {
-    background-image: url(../assets/Morning.jpg);
+    background-image: url(../assets/Night.jpg);
     background-size: cover;
     background-position: center center;
     
@@ -134,12 +134,3 @@ main{
     font-size: 15px;
 
 }
-@media  (max-width: 768px) {
-    .weather{
-        position: fixed;
-    }
-    .weather-night{
-        position: fixed;
-    }
-    
-  }
