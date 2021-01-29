@@ -9,14 +9,14 @@
 .weather{
     background-image: url(../assets/Morning.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: center center;
     transition: 0.4s ease-out;
 }
 .weather-night
 {
     background-image: url(../assets/ColdNight.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: center center;
     transition: 0.4s ease-out;
 
 }
@@ -78,7 +78,7 @@ main{
     border-radius: 16px;
     padding: 15px 25px;
     color:#fff;
-    font-size: 112px;
+    font-size: 90px;
     font-weight: 900;
     text-shadow: 3px 3px rgba(50,50,70,0.5);
     text-align: center;
@@ -96,7 +96,7 @@ main{
 .wind-speed{
     color:#fff;
     margin-top: 15px;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Play', sans-serif;
 
 
@@ -114,7 +114,7 @@ main{
 
 .wind-speed .speed{
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     margin-left:17px ;
 }
 
@@ -122,13 +122,13 @@ main{
     font-family: 'Play', sans-serif;
     color: #fff;
     margin-top: 15px;
-    font-size: 25px;
+    font-size: 20px;
     padding: 10px;
     text-align: right;
 }
 .humidity .humid{
     color: #fff;
     margin-right: 17px;
-    font-size: 20px;
+    font-size: 15px;
 
 }
