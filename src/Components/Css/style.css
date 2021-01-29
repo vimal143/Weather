@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&family=Rokkitt:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.weather{
+    background-image: url(../assets/Morning.jpg);
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.4s ease-out;
+}
+.weather-night
+{
+    background-image: url(../assets/ColdNight.jpg);
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.4s ease-out;
+
+}
+main{
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,0.75));
+    padding: 25px;
+}
+.search-box{
+    width: 100%;
+    margin: 0 0 75px;
+}
+.search-box .search-bar{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 0px 0px 16px 16px;
+    margin-top: -25px;
+    box-shadow: 0px 5px rgba(0,0,0,0.2);
+    color: #313131;
+    font-size: 20px;
+
+}
+.search-box .search-bar:focus{
+    background-color: rgba(255,255,255,0.75);
+}
+.location-container .location{
+    font-family: 'Play', sans-serif;
+    color: aliceblue;
+    font-size: 42px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+
+}
+.location-container .Date{
+    color:#fff;
+    font-family: 'Play', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 2px 2px rgba(50,50,70,0.5);
+}
+.weather-box{
+    text-align: center;
+}
+.weather-box .temperature{
+    font-family: 'Rokkitt', serif;
+    position: relative;
+    display: inline-block;
+    margin: 30px auto;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 15px 25px;
+    color:#fff;
+    font-size: 112px;
+    font-weight: 900;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+    text-align: center;
+    box-shadow: 3px 6px rgba(0,0,0,0.2);
+
+}
+.weather-box .weather-description{
+    color:#fff;
+    font-size: 48px;
+    font-weight: 700px;
+    font-family: 'Shrikhand', cursive;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+}
+
+.wind-speed{
+    color:#fff;
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: 'Play', sans-serif;
+
+
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+
+}
+.column{
+    flex: 1 1 0px;
+    padding: 0.6rem;
+}
+
+.wind-speed .speed{
+    color: #fff;
+    font-size: 20px;
+    margin-left:17px ;
+}
+
+.humidity{
+    font-family: 'Play', sans-serif;
+    color: #fff;
+    margin-top: 15px;
+    font-size: 25px;
+    padding: 10px;
+    text-align: right;
+}
+.humidity .humid{
+    color: #fff;
+    margin-right: 17px;
+    font-size: 20px;
+
+}
