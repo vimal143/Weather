@@ -11,19 +11,19 @@ const Weather = () => {
     const [city, setCity] = useState("Delhi");
     const [weather, setWeather] = useState({});
 
-    
-  window.onload=(e)=>{
-      console.log(e.target.value);
-    fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
-    .then(res => res.json())
-    .then(result => {
-        setWeather(result)
-        setCity('');
-    });
-  }
+
+    window.onload = (e) => {
+        console.log(e.target.value);
+        fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
+            .then(res => res.json())
+            .then(result => {
+                setWeather(result)
+                setCity('');
+            });
+    }
 
     const search = (event) => {
-       
+
         if (event.key === 'Enter') {
             fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
                 .then(res => res.json())
@@ -54,7 +54,7 @@ const Weather = () => {
     }
     return (
         <>
-            <div className={(typeof weather.main!="undefined")?((new Date().getHours())>=5 && (new Date().getHours()<=17)?'weather':'weather-night'):'weather'}>
+            <div className={(typeof weather.main != "undefined") ? ((new Date().getHours()) >= 5 && (new Date().getHours() <= 17) ? 'weather' : 'weather-night') : 'weather'}>
                 <main>
                     <div className="search-box">
                         <input
@@ -64,7 +64,7 @@ const Weather = () => {
                             onChange={e => setCity(e.target.value)}
                             value={city}
                             onKeyPress={search}
-                           
+
                         />
 
                     </div>
@@ -72,7 +72,7 @@ const Weather = () => {
                         <div>
                             <div className="location-container">
                                 <div className="location">
-                    <h4>{weather.name}, {weather.sys.country}</h4>
+                                    <h4>{weather.name}, {weather.sys.country}</h4>
 
                                 </div>
                                 <div className="Date">
@@ -87,25 +87,29 @@ const Weather = () => {
                    </div>
                                 <div className="weather-description">
                                     {weather.weather[0].main}
-                   </div>
+                                </div>
                             </div>
                             <div className="row">
-                            <div className=" column wind-speed">
-                            Wind Speed<br></br>
-                    <span className="speed">{weather.wind.speed} km/hr</span>
-                            
-                        </div>
-                         <div className=" column humidity">
-                                Humidity<br></br>
-                    <span className="humid">{weather.main.humidity} %</span>
+                                <div className=" column wind-speed">
+                                    Wind Speed<br></br>
+                                    <span className="speed">{weather.wind.speed} km/hr</span>
+
+                                </div>
+                                <div className=" column humidity">
+                                    Humidity<br></br>
+                                    <span className="humid">{weather.main.humidity} %</span>
+                                </div>
                             </div>
-                            </div>
-                        
+
+
+
+
 
                         </div>
                     ) : (' ')}
 
                 </main>
+                
 
             </div>
         </>
